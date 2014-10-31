@@ -1,8 +1,6 @@
 /*
  * Tacho.c
- *
- * Created: 19.06.2014 15:33:40
- *  Author: Jonas
+ *  Author: noname7890
  */ 
 
 #define F_CPU 1000000
@@ -16,16 +14,16 @@
 #define _WHEEL_SIZE 207
 
 //Define characters (negative)
-#define _C1 0b10101111//0b01010000
-#define _C2 0b11001000//0b00110111
-#define _C3 0b10101000//0b00000000
-#define _C4 0b10100101//0b00000000
-#define _C5 0b10110000//0b00000000
-#define _C6 0b10010001//0b00000000
-#define _C7 0b10101110//0b00000000
-#define _C8 0b10000000//0b00000000
-#define _C9 0b10100000//0b00000000
-#define _C0 0b10000010//0b00000000
+#define _C1 0b10101111
+#define _C2 0b11001000
+#define _C3 0b10101000
+#define _C4 0b10100101
+#define _C5 0b10110000
+#define _C6 0b10010001
+#define _C7 0b10101110
+#define _C8 0b10000000
+#define _C9 0b10100000
+#define _C0 0b10000010
 #define _C_ 0b11111101
 #define _CCLEAR 255
  
@@ -170,7 +168,6 @@ int main(void)
 	
 	render(0);
 	
-	//PORTC = 0b01010000;
     while(1)//main loop
 	{	
 		while(PINB & (1 << PB1) && cntr < 30000){} // wait for reed
